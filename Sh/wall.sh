@@ -1,13 +1,12 @@
 #/bin/bash
 
-
+#Inspired from jaseem abid to set a wallpaper in Xfce from Natgeo
 # Make cache directory
 dir=~/.wpoftheday
 [ -d $dir ] || mkdir $dir
 
 # CD to cache dir
 cd $dir
-
 # Delete index file if it exists
 [ -e p1 ] || rm p1
 [ -e p2 ] || rm p2
