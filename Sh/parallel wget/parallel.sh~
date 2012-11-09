@@ -1,6 +1,5 @@
-#!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
-
+#! /bin/bash
+#Sudev Ambadi
 #this script is usefull to run many wget process parally 
 #two parameters are required no of desired parall wget process and path to text file
 if [ $# -ne  ]

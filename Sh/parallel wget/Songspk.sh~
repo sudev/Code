@@ -1,6 +1,4 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
-
 #uri creator 
 touch songspk
 for i in {9453..9458}

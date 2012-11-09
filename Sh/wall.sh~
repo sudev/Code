@@ -1,6 +1,4 @@
-#!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
-
+#/bin/bash
 
 #Inspired from jaseem abid to set a wallpaper in Xfce from Natgeo
 # Make cache directory

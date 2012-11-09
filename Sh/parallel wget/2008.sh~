@@ -1,6 +1,4 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
-
 
 #traditional way to download something 
 #this script has been improved use url.sh to create uri file containing urls first and
