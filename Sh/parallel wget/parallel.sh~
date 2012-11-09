@@ -1,0 +1,10 @@
+#! /bin/bash
+#Sudev Ambadi
+
+if [ $# -ne  ]
+  then
+    echo "Format ./parallel.sh <no of parallel downloads> <path-to-urlfile>"
+fi
+
+
+parallel -j $1 wget -nvc --progress=bar < $2
