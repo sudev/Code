@@ -1,8 +1,12 @@
+Idea : Say you want to download many files in parallel you can use "gnu-parallel" to run many wget in parallel.
 
+I have created script to download many images from Nat Geo website in parallel, this is particularly helpful in reducing the time required to download many files.
 
-Say you want to download many files in parallel you can use "gnu-parallel" to run many wget in parallel.
+Run urls.sh 
+#this will create a file uri with required urls in it 
+Run parallel.sh with two parameters 
+#parallel.sh <no-of-parallel-wgets> uri
 
-I have created script to download many images from Nat Geo website in parallel, this is very helpful in 
-reducing the time required to download many files.
+You may use parallel.sh to download in parallel with any set of urls, just pass the desired file instead of uri.
 
-Run urls.sh first then run parallel.sh 
+2008.sh was the original script and it took more than 20 mins to download all files using parallel.sh you can do the same in say 4mins.
