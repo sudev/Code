@@ -1,3 +1,5 @@
+#!/bin/bash
+Author : Sudev Ambadi <sudevdev@gmail.com>
 
 #Enter all the required softwres to be installed within the array 
 array=( vlc chromium-browser kate geany gnome-do  linuxdccp)
