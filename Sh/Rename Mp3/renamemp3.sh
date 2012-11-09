@@ -1,5 +1,5 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
+#Author : Sudev Ambadi <sudevdev@gmail.com>
 
 #script rename mp3 files downloaded from sonspk Enter the desired destination 
 #this script requires  eyed3 installed to run

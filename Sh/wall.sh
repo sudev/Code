@@ -1,5 +1,5 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
+#Author : Sudev Ambadi <sudevdev@gmail.com>
 
 
 #Inspired from jaseem abid to set a wallpaper in Xfce from Natgeo

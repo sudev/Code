@@ -1,5 +1,5 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
+#Author : Sudev Ambadi <sudevdev@gmail.com>
 
 
 #traditional way to download something 

@@ -1,5 +1,5 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
+#Author : Sudev Ambadi <sudevdev@gmail.com>
 
 if [ $# -ne 2 ]
   then

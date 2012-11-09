@@ -1,5 +1,5 @@
 #!/bin/bash
-Author : Sudev Ambadi <sudevdev@gmail.com>
+#Author : Sudev Ambadi <sudevdev@gmail.com>
 # this file will create a uri text file with all possible links inside it 
 for a in {1..26}
 do
