@@ -1,3 +1,5 @@
 Script can be used to  rename dowloaded files using wget
 Its not complete! may delete all your files inside folder 
 Requires eyed3 installed in your system
+renamer-folder.sh - Tried to include making an folder using album name and then copying them to respective folders 
+(Basically tried to sort by movie, didnt work for some unkonwn reason)

@@ -7,4 +7,5 @@ if [ $# -ne 2 ]
 fi
 
 no=`cat $1 | wc -l`
+echo -ne "Total  "$no"  Wgets are running\n"
 parallel -j $no wget -nvc --progress=bar < $1

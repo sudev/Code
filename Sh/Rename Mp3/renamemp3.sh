@@ -7,7 +7,7 @@ read a
 cd $a
 pwd
 for f in song*
-do 
+do
 a=`eyeD3  $f | grep title | cut -f1 -d"-" | cut -d\  -f2`
 mv $f $a.mp3
 done
