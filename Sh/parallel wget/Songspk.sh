@@ -3,7 +3,7 @@
 
 #uri creator 
 touch songspk
-for i in {8806..8819}
+for i in {1..91}
 do
-echo http://link1.songspk.pk/song1.php?songid=$i >> songspk
+echo https://class.coursera.org/bigdata-2012-001/lecture/download.mp4?lecture_id=$i >> songspk
 done
