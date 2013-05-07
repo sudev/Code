@@ -1,0 +1,6 @@
+ 1. Start writting a small program without function definitions
+ 2. Once you get it working wncapsulate it with function 
+ 3. Generalize the function by adding appropriate functions
+ 4. Repeat 1 - 3 until you have a set of working functions. Copy paste working code to avoid retyping and redebugging
+ 5. Look for oppurtunities to refactor your code.
+
