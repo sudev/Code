@@ -1,6 +1,5 @@
 import math
 from swampy.TurtleWorld import *
-print math.pi
 def circler(turt, radius):
     steps = 100
     circum = 2.0 * math.pi * float(radius)
