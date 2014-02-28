@@ -31,17 +31,22 @@
 #include "vnode.h"
 #include "vmnt.h"
 #include "path.h"
+#include <stdio.h>
+
 
 char mode_map[] = {R_BIT, W_BIT, R_BIT|W_BIT, 0};
+/* +++mapping from O_ACCMODE mask to R_BIT/W_BIT flags */
 
 static struct vnode *new_node(struct lookup *resolve, int oflags,
 	mode_t bits);
+
 static int pipe_open(struct vnode *vp, mode_t bits, int oflags);
 
 
 /*===========================================================================*
  *				do_creat				     *
  *===========================================================================*/
+
 int do_creat()
 {
 /* Perform the creat(name, mode) system call.
@@ -56,6 +61,7 @@ int do_creat()
   vname = (vir_bytes) job_m_in.name;
   vname_length = (size_t) job_m_in.name_length;
   open_mode = (mode_t) job_m_in.mode;
+/* name, length of files name etc are received here */
 
   if (copy_name(vname_length, fullpath) != OK) {
 	/* Direct copy failed, try fetching from user space */
@@ -86,6 +92,8 @@ int do_open()
 
   /* If O_CREAT is set, open has three parameters, otherwise two. */
   if (open_mode & O_CREAT) {
+	/** to check what value is printed out for each **/
+	printf("%d P_CREATE and %d O_CREATEI and %d open_mode", O_CREAT, O_CREATI, open_mode );
 	vname = (vir_bytes) job_m_in.name1;
 	vname_length = (size_t) job_m_in.name1_length;
 	r = fetch_name(vname, vname_length, fullpath);
@@ -101,6 +109,8 @@ int do_open()
   }
 
   if (r != OK) return(err_code); /* name was bad */
+
+
   return common_open(fullpath, open_mode, create_mode);
 }
 
@@ -108,6 +118,7 @@ int do_open()
 /*===========================================================================*
  *				common_open				     *
  *===========================================================================*/
+
 int common_open(char path[PATH_MAX], int oflags, mode_t omode)
 {
 /* Common code from do_creat and do_open. */
@@ -314,8 +325,9 @@ int common_open(char path[PATH_MAX], int oflags, mode_t omode)
  *===========================================================================*/
 static struct vnode *new_node(struct lookup *resolve, int oflags, mode_t bits)
 {
-/* Try to create a new inode and return a pointer to it. If the inode already
-   exists, return a pointer to it as well, but set err_code accordingly.
+/* Try to create a new inode and return a pointer to it.
+ *
+ * If the inode already exists, return a pointer to it as well, but set err_code accordingly.
    NULL is returned if the path cannot be resolved up to the last
    directory, or when the inode cannot be created due to permissions or
    otherwise. */
