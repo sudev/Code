@@ -94,7 +94,7 @@
 /* Oflag values for open().  POSIX Table 6-4. */
 #define O_CREAT        00100 	/* creat file if it doesn't exist */
 /** Creating a flag for CREATI as suggested by murali sir */
-#define O_CREATI	   01100
+#define O_CREATI	   01100    /* Flag for creating immediate files */
 #define O_EXCL         00200	/* exclusive use flag */
 #define O_NOCTTY       00400	/* do not assign a controlling terminal */
 #define O_TRUNC        01000	/* truncate flag */
