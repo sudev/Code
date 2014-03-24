@@ -43,6 +43,8 @@ static void restart_reopen(int major);
 static int safe_io_conversion(endpoint_t, cp_grant_id_t *, int *,
 	endpoint_t *, void **, size_t, u32_t *);
 
+/** endpoint is just a int typedef **/
+
 static int dummyproc;
 
 
@@ -51,6 +53,7 @@ static int dummyproc;
  *===========================================================================*/
 int dev_open(
   dev_t dev,			/* device to open */
+  /** dev_t => device number **/
   endpoint_t proc_e,		/* process to open for */
   int flags			/* mode bits and flags */
 )
