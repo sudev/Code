@@ -42,8 +42,9 @@ int fs_putnode(void)
 
   struct inode *rip;
   int count;
-  
+  /** rip is just an inode structure **/
   rip = find_inode(fs_dev, (ino_t) fs_m_in.REQ_INODE_NR);
+  /** fs_dev is the link to dev handled by fs proc and fs_m_in is incoming message **/
 
   if(!rip) {
 	  printf("%s:%d put_inode: inode #%u dev: %d not found\n", __FILE__,
@@ -131,6 +132,7 @@ struct inode *get_inode(
  * load it from the disk if it's necessary and put on the hash list 
  */
   register struct inode *rip;
+  /** rip is the pointer to inode that is to be read / written **/
   int hashi;
 
   hashi = (int) (numb & INODE_HASH_MASK);
@@ -290,6 +292,9 @@ struct inode *alloc_inode(dev_t dev, mode_t bits)
   } else {
 	/* An inode slot is available. Put the inode just allocated into it. */
 	rip->i_mode = bits;		/* set up RWX bits */
+	/** Here the bits is set
+	 * Not sure if its required to set bits for Immediate and regular separately
+	**/
 	rip->i_nlinks = NO_LINK;	/* initial no links */
 	rip->i_uid = caller_uid;	/* file's uid is owner's */
 	rip->i_gid = caller_gid;	/* ditto group id */
