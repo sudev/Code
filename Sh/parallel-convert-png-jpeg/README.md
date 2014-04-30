@@ -1,5 +1,5 @@
 #Converting NEF to PNG
-It takes a lot of time if you converting NEF files to PNG using the usual for loop in terminal. 
+Helpful in a situation where you have to convert thousands of NEF files to PNG format using terminal and you have a multicore system. Remeber to install gnu parallel before trying out the script. The example given below can be used to convert any for loop to GNU parallel loop.
 
 ##Example 
  dcraw -c -w $filename | pnmtopng > $filename.png   /** this command is used to convert NEF files to PNG **/
