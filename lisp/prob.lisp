@@ -1,0 +1,11 @@
+(defun reverser ( aL)
+  ( cond 
+    ( (null aL) nil)
+        ( t ( append ( reverser ( cdr aL))
+                 (list (car aL))
+                 )
+        )
+    )
+  )
+(SETQ P (reverser '(1 2 3 4)))
+(print  P)

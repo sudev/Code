@@ -92,12 +92,19 @@ int do_open()
 
   /* If O_CREAT is set, open has three parameters, otherwise two. */
   if (open_mode & O_CREAT) {
-	/** to check what value is printed out for each **/
-	printf("%d P_CREATE and %d O_CREATEI and %d open_mode", O_CREAT, O_CREATI, open_mode );
+	printf("%d omode %d ocreat ",(int)open_mode,(int)(O_CREAT & open_mode));
 	vname = (vir_bytes) job_m_in.name1;
 	vname_length = (size_t) job_m_in.name1_length;
 	r = fetch_name(vname, vname_length, fullpath);
-  } else {
+  }
+  else if (open_mode & O_CREATI) {
+	  printf("%d Immediate file creation",(int)(open_mode & O_CREATI));
+	  vname = (vir_bytes) job_m_in.name1;
+	  vname_length = (size_t) job_m_in.name1_length;
+	  r = fetch_name(vname, vname_length, fullpath);
+
+  }
+  else {
 	vname = (vir_bytes) job_m_in.name;
 	vname_length = (size_t) job_m_in.name_length;
 	create_mode = 0;
